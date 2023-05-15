@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyojit Den</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/96b1529c4e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header" id="head">
+            <div class="head_img">
+                <img class="logo" src="./images/Black Minimalist Initial Font BE Logo.png" alt="logo">
+            </div>
+            <div class="nav-items">
+                <ul id="sidemenu">
+                    <li><a href="#head">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#work">Portfolio</a></li>
+                    <li><a href="#cont">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
+        </div>
+        <!-- <img src="./images/front_screen.jpeg" alt="my_pic" class="my_pic"> -->
+    </div>
+    <div class="big-feature-section">
+        <div class="container">
+            <div class="main">
+                <div class="about">
+                    <p><span class="auto-type"></span></p>
+                    <h1>Hi, I am <span>Priyojit</span><br>from India</h1>
+                </div>
+                <div class="img">
+                    <img class="my_pic" src="./images/AvatarMaker.png" alt="my_pic">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="big-feature-section">
+        <div class="container about_me" id="about">
+            <div class="my_img1">
+                <img src="./images/mobile.jpeg" alt="img">
+            </div>
+            <div class="para">
+                <h1 class="subtitle">About Me</h1>
+                <p>Hello, I am a student of RCC Institute of Information Technology Kolkata and a Full Stack developer learner and also have decent grasp over Data Structures and Algorithms. I enthusiastically participate in college hackathons to gain experience and skills. I am specializing in C++, and have solved nearly 400+ questions across all coding platforms.I'm a go getter and a quick learner.Being a Tech freak I love to dive into cool technologies..</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="table-content active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Design and Development</li>
+                        <li><span>Web Development</span><br>Web and App Websites</li>
+                        <li><span>Coder</span><br>500 DSA Problems</li>
+                    </ul>
+                </div>
+                <div class="table-content" id="experience">
+                    <ul>
+                        <li><span>2021 - Current</span><br>Design and Poster Developer at RCCTechz</li>
+                        <li><span>2022 - Current</span><br>Teaching Assistant</li>
+                        <li><span>Coder</span><br>500 DSA Problems</li>
+                    </ul>
+                </div>
+                <div class="table-content" id="education">
+                    <ul>
+                        <li><span>2007 - 2021</span><br>Salt Lake School</li>
+                        <li><span>2021 - 2025</span><br>RCC INSTITUTE OF INFORMATION TECHNOLOGY</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <div class="container services" id="services">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div id="about-service">
+                    <i class="fa-solid fa-code"></i>
+                    <h1>Web Design</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium impedit facilis eveniet,
+                        dolores maxime.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div id="about-service">
+                    <i class="fa-solid fa-crop"></i>
+                    <h1>UI/UX Design</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium impedit facilis eveniet,
+                        dolores maxime.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div id="about-service">
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h1>Coder</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium impedit facilis eveniet,
+                        dolores maxime.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <div class="container services" id="work">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work-1.png">
+                    <div class="layer">
+                        <h3>Tindog</h3>
+                        <p>Meet new and interesting dogs nearby.</p>
+                        <a href="https://priyojit21.github.io/Tindog.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./images/work-2.png">
+                    <div class="layer">
+                        <h3>Todo App</h3>
+                        <p>App helps you to keep track of your daily todo routine</p>
+                        <a href=" https://priyojit21.github.io/TodoList.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./images/work-3.png">
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>App helps you to checkout weather condition of any place around the world</p>
+                        <a href="https://priyojit21.github.io/Weather_app.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <button class="glow-on-hover" type="button">See More</button>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <div class="container services">
+            <div class="contact" id="cont">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p id="ema"><i class="fa-sharp fa-solid fa-paper-plane"></i>Kundupriyojit21@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8017268693</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/priyojit-kundu-37a024238/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/priyojit11/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <!-- we want that when user click download cv download automatically start we have to justa add pdf file in href nd add dowload keyword here -->
+                    <a href="./images/my-cv.pdf" download><button class="glow-on-hover glow-on-hover2" type="submit">Download CV</button></a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your name" required autocomplete="off">
+                        <input type="email" name="email" placeholder="Your email" required autocomplete="off">
+                        <textarea name="message"  rows="6" placeholder="Your message"></textarea>
+                        <button class="glow-on-hover glow-on-hover2" type="submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>Copyright @ Priyojit. Made with <i class="fa-solid fa-heart"></i> by Priyojit Kundu.</p>
+    </div>
+
+    <!-- <section class="big-feature-section">
+        <div class="container flex big-feature-container">
+            <div class="feature-img">
+                <img src="assets/asset 18.png" alt="feature">
+            </div>
+            <div class="feature-desc flex">
+                <h4>Effortless validation for</h4>
+                <h3>Design professionals</h3>
+                <p>Test interfaces, interaction flows, iconography and more, to help you create intuitive and delightful
+                    experiences for your users.
+                </p>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- dynamic typing effect er short trick -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Coder", "Web Developer", "Freelancer", "Student"],
+            typeSpeed: 200,
+            backSpeed: 200,
+            loop: true
+        })
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("table-content");
+
+        function opentab(tabname) {
+            // iterating for all tablinks and removing active links
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            // iterating for all tableontent and removing active tab
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            // here current target is all table content
+            event.currentTarget.classList.add("active-link");
+            // tabname is either skills ,experence,education
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw0-cbtWqxGwZNn5NypZYPC9owzXd-1LHhdngt4nHc709xwVwUq4Eai2PA49E1Le4j4dA/exec';
+    const form = document.forms['submit-to-google-sheet']
+    // after conatct detail sent confirmation generation msg
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent Successfully";
+            setTimeout(function(){
+                msg.innerHTML="";
+            },5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>

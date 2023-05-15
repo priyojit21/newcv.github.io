@@ -1,0 +1,539 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+    color: white;
+}
+.container{
+    /* from top and bottom and 10% from left nd right */
+    padding: 10px;
+    margin-inline: auto;
+    max-width: 1180px;
+    padding-inline: 25px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.head_img{
+    flex-basis: 35%;
+}
+.nav-items{
+    flex-basis: 65%;
+}
+.logo{
+    width: 70px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.nav-items ul li{
+    /* nav bar er jonne inline block pasha pashi items ashbe */
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.nav-items ul li a{ 
+    /* underline ta muche debe text decorration = none */
+    text-decoration: none;           
+    font-size: 18px;
+    color: #fff;
+    /* jehetu after effect absolute ache eta relative korte hobe */
+    position: relative;
+}
+
+.nav-items ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    bottom: -6px;
+    transition: 0.5s; 
+}
+.nav-items ul li a:hover::after{
+    /* after a underline gulo jate dekha na jaaye tai width 0 , r ekhane jate dekha jaaye tai width 100 */
+    width: 100%;
+} 
+
+.my_pic{
+    width: 400px;
+    border-radius: 50%;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.about {
+    font-size: 40px;
+}
+.img{
+    margin-right: 20px;
+}
+.about h1{
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.about h1 span{
+    color: red;
+}
+
+.big-feature-section{
+    margin-top: 80px;
+}
+
+
+.about_me{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.my_img1 img{
+    margin-bottom: 30px;
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    flex-basis: 40%;
+}
+.para{
+    flex-basis: 55%;
+}
+.subtitle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+.para p{
+    margin-top: 35px;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px; 
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s; 
+}
+.tab-links.active-link:hover::after{
+    width: 50%;
+}
+
+.table-content ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.table-content ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.table-content{
+    display: none;
+}
+.table-content.active-tab{
+    display: block;
+}
+
+.services{
+    margin-right: 20px;
+
+}
+.services-list{
+    display: grid;
+    margin-top: 50px;
+    gap: 40px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(1,auto);
+    flex-wrap: wrap;
+}
+
+#about-service{
+    background-color: #262626;
+    /* padding jaate ja sob lekha ache er bhetor sob box er bhetore chole ashe */
+    padding: 35px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+#about-service p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#about-service i{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+#about-service h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+#about-service a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#about-service:hover{
+    background-color: #ff004f;
+    /* when hovered the div will move up by 10px in y direction */
+    transform: translateY(-10px);
+}
+
+.work-list{
+    display: grid;
+    margin-top: 50px;
+    gap: 40px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(1,auto);
+}
+.work{
+    overflow: hidden;
+    position: relative;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block; 
+    transition: transform 0.5s;
+}
+
+/* to zoom image when hovered write this nd also write line number 228 */
+.work:hover img{
+    transform:scale(1.1);
+}
+.layer{
+    width: 100%;
+    /* first a layer property hidden thakbe tai height 0, jokn hover hobe see line 254 */
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+/* jokn hover hobe then layer property ta nich theke 100% height opore uthbe */
+.work:hover .layer{
+    height: 100%;
+}
+.layer h3{
+    margin-bottom: 10px;
+}
+.layer p{
+    font-size: 14px;
+}
+.layer i{
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ff004f;
+    background-color: #fff;
+    /* icon take middle a place korche line height white bg tar */
+    line-height: 60px;
+    /* 60 by 60 white bg ta toiri korche width r height */
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    
+}
+
+.glow-on-hover {
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin: 50px auto;
+    border: 1px solid #ff004f;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.contact{
+    display: flex;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 65%;
+}
+
+.contact-left #ema{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.socials{
+    margin-top: 30px;
+}
+.socials a{
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #ababab;
+    font-size: 25px; 
+    margin-right: 15px;
+    transition: transform 0.5s;
+} 
+
+.socials a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.glow-on-hover2{
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* form er field gulo pasha pashi chilo, flex chara column wise kora holo dekhe nao ki bhabe */
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #262626;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.footer i{
+    color: #ff004f;
+}
+
+.nav-items .fas{
+    display: none;
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+@media only screen and (max-width: 600px)
+{
+    .big-feature-section{
+        margin-top: 30px;
+    }
+    .logo{
+        width: 50px;
+    }
+    .my_pic{
+        width: 140px;
+        border-radius: 50%;
+        margin-left: 15px;
+    }
+
+    .about{
+        margin-right: 20px;
+    }
+    .about h1{
+        font-size: 25px;
+        text-overflow: clip;
+    }
+    .auto-type{
+        font-size: 17px;
+    }
+    .nav-items .fas{
+        display: block;
+        font-size: 20px;
+    }
+    .nav-items ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    .nav-items ul li{
+        display: block;
+        margin: 25px;
+    }
+    .nav-items .fas{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    
+    .subtitle{
+        font-size: 30px;
+    }
+    .services-list{
+        display: flex;
+        flex-direction: column;
+    }
+    #about-service{
+        padding: 30px;
+    }
+    .my_img1 img{
+        width: 300px;
+        border-radius: 50px;
+    }
+    .my_img1 img, .para{
+        flex-basis: 100%;
+    }
+    .para.subtitle{
+        margin-left: 20px;
+    }
+    .para p{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .table-content li{
+        font-size: 12px;
+    }
+
+    .services-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .work-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .contact-left p {
+        font-size: 14px;
+    }
+    .glow-on-hover {
+        width: 120px;
+    }
+    .glow-on-hover2{
+        margin-top: 20px;
+    }
+    .footer{
+        margin-top: 20px;
+    }
+}
